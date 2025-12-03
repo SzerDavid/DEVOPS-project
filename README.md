@@ -1,2 +1,30 @@
-# DEVOPS-project
-This is the GDE DEVOPS project
+### Welcome
+
+This is the documentation for the project.
+
+Compontents:
+- python webapp
+- docker
+- github workflow
+
+
+##### Build steps for app to container
+
+In order to build the container please use the following commands from the project root!
+
+``` bash
+docker build -t SzerDavid/DEVOPS-project:latest .
+```
+
+In order to take the freshly built container to a test drive use the following commnad. 
+
+``` bash
+ docker run -it -p 10080:8080 SzerDavid/DEVOPS-project:latest
+```
+
+Then verify it via the appropriate url.
+
+``` bash
+administrator@debian:/tmp/demo $ curl http://localhost:10080
+This is the demo app running on :8080
+```
